@@ -33,21 +33,21 @@ asp <- w/h
 
 
 px <- mapply(function(x, y, r, asp) {
-    c <- base_circle(n=6) * r
+    c <- base_circle(n=46) * r
     c[,1] <- c[,1]+x
     c[,2] <- c[,2]*asp+y
     c <- rbind(c, c(NA, NA))
     c[,1]
   }, x, y, r, asp = asp)
 py <- mapply(function(x, y, r, asp) {
-    c <- base_circle(n=6) * r
+    c <- base_circle(n=46) * r
     c[,1] <- c[,1]+x
     c[,2] <- c[,2]*asp+y
     c <- rbind(c, c(NA, NA))
     c[,2]
   }, x, y, r, asp = asp)
 
-polygon(px, py, pch = '.', lty =3)
+polygon(px, py, pch = '.', lty =1, col = "#00000010", border = "green")
 
 
 
